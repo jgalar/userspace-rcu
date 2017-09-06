@@ -95,7 +95,7 @@ static
 int rcu_bp_refcount;
 
 /* If the headers do not support membarrier system call, fall back smp_mb. */
-#ifdef __NR_membarrier
+#if 0
 # define membarrier(...)		syscall(__NR_membarrier, __VA_ARGS__)
 #else
 # define membarrier(...)		-ENOSYS
