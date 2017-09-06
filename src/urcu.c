@@ -64,7 +64,7 @@
 #define RCU_QS_ACTIVE_ATTEMPTS 100
 
 /* If the headers do not support membarrier system call, fall back on RCU_MB */
-#ifdef __NR_membarrier
+#if 0
 # define membarrier(...)		syscall(__NR_membarrier, __VA_ARGS__)
 #else
 # define membarrier(...)		-ENOSYS
